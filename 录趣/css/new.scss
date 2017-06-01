@@ -1,0 +1,160 @@
+@import 'reset.css';
+@mixin full($w,$h,$bg){
+    width: $w;
+    height: $h;
+    background: $bg;
+}
+@mixin box($ver){
+    display: -webkit-box;
+    -webkit-box-orient: $ver;
+}
+html,body,.warrper{
+    @include full(100%,100%,none);
+}
+.warrper{
+    @include box(vertical);
+}
+header{
+    @include full(100%,5.5rem,none);
+}
+section{
+    -webkit-box-flex: 1;
+}
+header{
+    @include box(horizontal);
+    position: relative;
+    border-bottom: 1px solid #cccccc;
+    #h_lt{
+        display: inline-block;
+        margin-left: 1rem;
+        margin-right:2rem;
+        margin-top: 1.5rem;
+        @include full(1rem,1.5rem,none);
+        img{
+            @include full(1rem,auto,none);
+        }
+    }
+    input{
+        margin: 1rem 0;
+        -webkit-box-flex: 1;
+        display: block;
+        @include full(100%,3.5rem,#eeeeee);
+        border: none;
+        padding-left: 2.5rem;
+        box-sizing: border-box;
+        outline: none;
+        border-radius: 0.5rem;
+        
+    }
+    #h_rt{
+        display: block;
+        @include full(3rem,1.5rem,none);
+        margin-left: 1.5rem;
+        margin-right: 1rem;
+        line-height: 5.4rem;
+        font-size: 1.6rem;
+        color: #FF0000;
+    }
+}
+.y_flo{
+    padding: 0 1rem;
+        box-sizing: border-box;
+         border-bottom: 1px solid #d9d9d9;
+    @include full(100%,7.3rem,none);
+    li{
+        position: relative;
+      @include box(horizontal);
+       @include full(100%,7.3rem,none);
+        padding-top: 1.4rem;
+        box-sizing: border-box;
+         border-bottom: 1px solid #cccccc;
+            .y_lt{
+        display: block;
+        @include full(3.5rem,3.5rem,none);
+        img{
+            @include full(3.5rem,auto,none);
+        }
+    }
+     .center{
+        margin-left: 1rem;
+        h1{
+            font-size: 1.6rem;
+        }
+        p{
+            color: #9a9a9a;
+        }
+    }
+       .y_rt{
+           display: block;
+           @include full(6rem,2.6rem,none);
+           text-align: center;
+           border: 1px solid #999999;
+           position: absolute;
+           right: 0;
+           top: 2.3rem;
+           border-radius: 0.5rem;
+           line-height: 2.6rem;
+           font-size: 1.4rem;
+           color: #999999;
+       }
+    }
+   
+}
+.fam{
+      padding: 2rem 0.5rem;
+     box-sizing: border-box;
+     border-bottom: 1px solid #d9d9d9;
+    @include full(100%,16.5rem,none);
+    position: relative;
+    .top{
+        @include full(100%,6rem,none);
+        dl{
+        @include box(horizontal);
+        img{
+            @include full(3.8rem,auto,none);
+        }
+        dd{
+            margin-left: 1rem;
+        }
+        #tea {
+            display: inline-block;
+            margin-top: 1rem;
+            margin-left: 0.4rem;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            outline: none;
+            border: 1px solid #9A9A9A;
+            color: #9A9A9A;
+            background: none;
+        }
+    }
+    .y_rt{
+           display: block;
+          @include full(6rem,2.6rem,none);
+           text-align: center;
+           border: 1px solid red;
+           position: absolute;
+           right: 1rem;
+           top: 2.3rem;
+           border-radius: 0.5rem;
+           line-height: 2.6rem;
+           font-size: 1.4rem;
+           color: red;
+       }
+    }
+    .btn{
+        @include full(100%,6.5rem,none);
+        margin-top: 0.5rem;
+//      border-bottom: 1px solid #ccc;
+    }
+    
+}
+#sea{
+    @include full(1.4rem,1.4rem,none);
+    position: absolute;
+    left:4.5rem;
+    top:1.8rem;
+    img{
+         @include full(1.4rem,auto,none);
+    }
+}
